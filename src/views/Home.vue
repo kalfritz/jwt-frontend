@@ -30,6 +30,12 @@ export default {
   data: () => ({
     user: null,
   }),
+  methods: {
+    logout() {
+      localStorage.removeItem('token');
+      this.$router.push('/login');
+    },
+  },
   mounted() {
     fetch(API_URL, {
       headers: {
