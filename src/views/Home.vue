@@ -25,7 +25,6 @@
 </template>
 
 <script>
-const API_URL = 'https://jwtauthbackend.herokuapp.com/';
 export default {
   data: () => ({
     user: null,
@@ -36,21 +35,7 @@ export default {
       this.$router.push('/login');
     },
   },
-  mounted() {
-    fetch(API_URL, {
-      headers: {
-        authorization: `Baerer ${localStorage.token}`,
-      },
-    })
-      .then(res => res.json())
-      .then(result => {
-        if (result.user) {
-          this.user = result.user;
-        } else {
-          this.logout();
-        }
-      });
-  },
+
   name: 'home',
 };
 </script>
