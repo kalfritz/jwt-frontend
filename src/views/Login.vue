@@ -51,7 +51,7 @@
 <script>
 import Joi from 'joi';
 
-const LOGIN_URL = 'https://jwtauthbackend.herokuapp.com/auth/login';
+const LOGIN_URL = 'https://jwtauthbackend.herokuapp.com/auth/login/';
 
 const schema = Joi.object().keys({
   username: Joi.string()
